@@ -2,7 +2,10 @@
 //  FCOfflineQueue.h
 //  By Marco Arment. See included LICENSE file for BSD license.
 //
-//  Requires FMDB (https://github.com/ccgus/fmdb) and linking to SQLite.
+//  Requires:
+//   - FCReachability from FCUtilities (https://github.com/marcoarment/FCUtilities)
+//   - FMDB (https://github.com/ccgus/fmdb)
+//   - linking to SQLite
 
 #import <Foundation/Foundation.h>
 #import "FCReachability.h"
