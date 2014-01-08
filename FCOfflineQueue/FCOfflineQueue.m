@@ -124,6 +124,7 @@
     }
     
     [self _enqueueOperationForID:rowID opcode:opcode userInfo:userInfo highPriority:highPriority];
+    [self tryToResume:nil];
 }
 
 - (void)_enqueueOperationForID:(int64_t)rowID opcode:(int64_t)opcode userInfo:(NSDictionary *)userInfo highPriority:(BOOL)highPriority
