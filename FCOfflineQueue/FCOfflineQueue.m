@@ -47,6 +47,7 @@
         
         NSString *dbPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:NSStringFromClass(self.class)];
         self.databaseQueue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
+        [[NSURL fileURLWithPath:dbPath] setResourceValue:@YES forKey:NSURLIsExcludedFromBackupKey error:NULL];
         
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
